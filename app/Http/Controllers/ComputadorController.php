@@ -7,12 +7,11 @@ use Illuminate\Http\Request;
 
 class ComputadorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        //
+        $computadores = Computador::all();
+        return view('computadores.index')->with('computadores', $computadores);
     }
 
     /**
